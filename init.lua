@@ -39,6 +39,7 @@ require("toggleterm").setup{}
 vim.cmd.colorscheme('neon')
 --Файловый менеджер
 require("nvim-tree").setup()
+nvimtreeapi = require("nvim-tree.api")
 --Русская раскладка
 require('ruscmd').setup{}
 --Индикатор прокрутки
@@ -47,7 +48,7 @@ require("scrollbar").setup()
 require'lspconfig'.pyright.setup(coq.lsp_ensure_capabilities({
 	cmd = { "pyright-langserver",
 		"--stdio",
-		"--pythonversion 3.10",
+		"--pythonversion 3.11",
 		"--ignoreexternal"
 	},
 }))
